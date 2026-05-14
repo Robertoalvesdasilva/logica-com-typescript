@@ -3,6 +3,9 @@ import readline = require('readline-sync')
 // Limpa tela
   console.clear()
 
+let loop:boolean = true
+while(loop)
+
 const nome:string = readline.question("Qual e o seu nome  ")
 
 const peso:number = Number(readline.question("Informe seu peso  "))
@@ -35,3 +38,8 @@ if (imc < 18.5){
 
 
 console.log(`Olá, ${nome}! Sua altura e  ${altura}, e seu peso e de ${peso}, com isso seu imc e de  ${imc.toFixed(2)} a sua classificação! ${situacao}`)
+
+const continuar = radline.question("deseja continuar? s -sim  |  N Não")
+if (continuar.toUpperCase() === 'N'){
+loop = false
+}
