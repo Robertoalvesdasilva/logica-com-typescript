@@ -1,4 +1,6 @@
 import readline = require('readline-sync')
+ 
+
 
 // Limpa tela
   console.clear()

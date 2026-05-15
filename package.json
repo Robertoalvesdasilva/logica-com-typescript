@@ -1,41 +1,25 @@
 {
   "name": "logica-com-typescript",
   "version": "1.0.0",
-<<<<<<< HEAD
-  "description": "logica",
-=======
   "description": "",
->>>>>>> 81c02ce (calculo imc e cadastra notas)
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-<<<<<<< HEAD
-    "url": "git+https://github.com/Robertoalvesdasilva/logica-com-typescript.git"
-=======
     "url": "git+https://github.com/glesiosantos/logica-com-typescript.git"
->>>>>>> 81c02ce (calculo imc e cadastra notas)
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-<<<<<<< HEAD
-    "url": "https://github.com/Robertoalvesdasilva/logica-com-typescript/issues"
-  },
-  "homepage": "https://github.com/Robertoalvesdasilva/logica-com-typescript#readme",
-  "devDependencies": {
-    "@types/node": "^25.6.2",
-=======
     "url": "https://github.com/glesiosantos/logica-com-typescript/issues"
   },
   "homepage": "https://github.com/glesiosantos/logica-com-typescript#readme",
   "devDependencies": {
     "@types/node": "^25.6.2",
     "@types/readline-sync": "^1.4.8",
->>>>>>> 81c02ce (calculo imc e cadastra notas)
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3"
   },
