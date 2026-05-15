@@ -1,7 +1,7 @@
 {
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-<<<<<<< HEAD
+
     // File Layout
     // "rootDir": "./src",
     // "outDir": "./dist",
@@ -41,7 +41,7 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-=======
+
     "target": "ES2022",
     "types": ["node"],
     "module": "CommonJS",
@@ -49,6 +49,6 @@
     "strict": true,
     "esModuleInterop": true,
     "verbatimModuleSyntax": false
->>>>>>> 81c02ce (calculo imc e cadastra notas)
+
   }
 }
