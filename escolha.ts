@@ -1,61 +1,65 @@
-import readline = require("readline-sync")
+import * as readline from "readline-sync"
 
-console.clear()
+const combos:string[] = [
+  "X-Burger + Refrigerante",
+  "X-Salada + Suco",
+  "Hot Dog + Refrigerante",
+  "Batata Frita"
+]
 
-let loop:boolean = true
-let preco:number = 0
-let comboSelecionado:string =[] 
-let combos:string[] = ["Pet Coca + Bomba", "Pet Guarana + Bomba", "Café + Bolo", "Café com Leite"]
+const precos:number[] = [10.5, 10, 7.5, 2.5]
+
+let comboSelecionado:string[] = []
 let valores:number[] = []
 
-while(loop){
+let loop:boolean = true
 
-console.log('Combo para lanche: ')
-  
-combos.forEach((combo.index) => console.log(`${index + 1} - ${combo}`))
-   
-const opcoes:string = readline.question('Escolha uma opção: ')
+while(loop) {
 
+  console.log("\nCombo para o lanche:")
 
-	switch(opcoes) {
-  		case 1:
-			comboSelecionado.push(combos[opcoes - 1])
-	  		preco = 10.5
-	  		valores.push(preco)
-	  		break
+  combos.forEach((combo, index) => {
+    console.log(`${index + 1} - ${combo}`)
+  })
 
-	  	case 2:
-			comboSelrcionado.push(combo[opcoes - 1])
-	  		preco = 10
-	  		valores.push(preco)
-	 		break
+  const opcoes:number = readline.questionInt(
+    "Escolha uma opção: "
+  )
 
-	  	case 3:
-			comboSeleciondo.push(combo[opcoes - 1])
-	  		preco = 7.5
-	  		valores.push(preco)
-	  		break
+  if(opcoes >= 1 && opcoes <= combos.length) {
 
-	  	case 4:
-			comboSelecionado.push(combo[opcoes - 1])
-	  		preco = 2.5
-	  		valores.push(preco)
-	  		break
+    comboSelecionado.push(combos[opcoes - 1]!)
 
-	  	default:
-			console.log('ops! Opação invalida informe numero de 1 a 4')
-	  		break
-}
-	const parar = readline.questionInt('Deseja algo a mais? 1 - sim  |  2 - não ')
-	loop = parar !== 2 ? true : false
+    const preco:number = precos[opcoes - 1]!
 
+    valores.push(preco)
+
+  } else {
+
+    console.log("Ops! Opção inválida informe número de 1 a 4")
+
+  }
+
+  const parar:number = readline.questionInt(
+    "\nDeseja algo à mais? 1 - Sim | 2 - Não "
+  )
+
+  loop = parar !== 2
 }
 
+console.log("\nResumo do pedido")
 
-console.lo("Resumo do pedido")
-for(let i = 0; i < comboSelecionado.length; i++){
-	console.log(`  ${comboSelecionado[i]}..... R$ ${valores[i].toFixed(2)}`)
+for(let i = 0; i < comboSelecionado.length; i++) {
+
+  console.log(
+    `${comboSelecionado[i]} ............. R$ ${valores[i]!.toFixed(2)}`
+  )
+
 }
-const totalAcumulado = valores.reduce((acc, valor) => acc +valor)
 
-console.log(`Você selecionou ${valores.length} item(ns) seu total é de R$ ${totalAcunulado.toFixed(2)}`)
+const totalAcumulado:number =
+  valores.reduce((acc, valor) => acc + valor, 0)
+
+console.log(
+  `\nVocê selecionou ${valores.length} item(ns) seu total é de R$ ${totalAcumulado.toFixed(2)}`
+)
